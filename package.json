@@ -1,0 +1,51 @@
+{
+  "name": "dateversion",
+  "version": "0.2.0",
+  "publisher": "h3knix",
+  "author": {
+    "name": "Michael Vandenberghe"
+  },
+  "engines": {
+    "vscode": ">=1.0.0"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "main": "./lib/dateversion",
+  "description": "Creates and updates dateversion strings",
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "date",
+    "version",
+    "version string",
+    "date version"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/h3knix/vscode-dateversion"
+  },
+  "homepage": "https://github.com/h3knix/vscode-dateversion/",
+  "dependencies": {
+    "moment": "^2.24.0"
+  },
+  "activationEvents": [
+    "onCommand:dateversion.insertupdate"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "dateversion.insertupdate",
+        "title": "Insert/Update DateVersion String"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "when": "editorFocus",
+          "command": "dateversion.insertupdate",
+          "group": "1_modification"
+        }
+      ]
+    }
+  }
+}
